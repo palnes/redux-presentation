@@ -1,4 +1,4 @@
-# redux at xeneta - the presentation
+# redux - the presentation
 
 Simple conjuring: 
 
@@ -6,4 +6,4 @@ Simple conjuring:
 $ npm install && npm start
 ```
 
-Open browser at http://localhost:8080
+Open browser at [http://localhost:8080]().
