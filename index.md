@@ -74,7 +74,7 @@ Actions are called with the store's dispatch functions
 
 ---
 
-## Store Selectors
+## State Selectors
 
 - Utility functions to retrieve parts of state from `store.getState()`
 
