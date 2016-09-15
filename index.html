@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>xeneta redux</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Sans'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-slide-content { font-size: 22px; }
+      .remark-code, .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+        color: #a00;
+        padding: 0 .2em;
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source"></textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl: 'index.md',
+        ratio: '4:3',
+        countIncrementalSlides: false,
+        highlightLanguage: 'javascript',
+        highlightStyle: 'monokai',
+      });
+    </script>
+  </body>
+</html>
