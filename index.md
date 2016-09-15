@@ -74,6 +74,34 @@ Actions are called with the store's dispatch functions
 
 ---
 
+## Store Selectors
+
+- Utility functions to retrieve parts of state from `store.getState()`
+
+- Can compute **derived data**
+
+- Uses `reselect` library to memoize output of selectors
+
+```
+import { createSelector } from 'reselect';
+
+const getFoo = state => state.foo; // 2
+const getBar = state => state.bar; // 2
+
+// Memoize state, only run when output of `getFoo` or `getFoo` changes.
+export const getFilteredSomething = () => createSelector(
+    [getFoo, getBar],
+    (foo, bar) => {
+        return (foo + bar); // !== 5
+);
+
+```
+
+
+???
+
+---
+
 class: center, middle
 
 # Reducers
@@ -235,7 +263,7 @@ class: center, middle
 ---
 
 # Middlewares
-Middlewares allows an action **payload** to be altered before being applied to a **reducer**.
+Middlewares allows an action **type** and **payload** to be altered before being applied to a **reducer**.
 This allows, for example, **async** actions.
 ```
 const USER_FIND ='USER_FIND'
@@ -267,11 +295,12 @@ store.dispatch({
 
 * **Store**
 
-  Bundles **reducers** into **state** and dispatches **actions** to **reducers**.
+  * Bundles **reducers** into **state** and dispatches **actions** to **reducers**.
+  * **Selectors** compute **derived data** only on **state** change.
 
 * **Reducers**
 
-  Pure functions that take **state** and **action**, and returns a new **state**.
+  * Pure functions that take **state** and **action**, and returns a new **state**.
 
 * **Actions**
 
@@ -348,4 +377,11 @@ class: center, middle
 
 # Show and Tell! 🎉
 
+---
+
+class: center, middle
+
+# fin.
+
+(cue 👏)
 
